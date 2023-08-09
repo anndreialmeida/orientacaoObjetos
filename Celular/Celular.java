@@ -10,15 +10,16 @@ package com.mycompany.aula;
  */
 public class Celular {
     
-    int idCelular;
-    String marca;
-    String modelo;
-    String memoriaRam;
-    Float armazenamento; 
+    private int idCelular;
+    private String marca;
+    private String modelo;
+    private String memoriaRam;
+    private Float armazenamento; 
     
     public Celular (){
         
     }
+    
     
     public Celular( int idCelular, String marca, String modelo, String memoriaRam, float armazenamento){
         this.idCelular = idCelular;
@@ -26,6 +27,12 @@ public class Celular {
         this.modelo = modelo; 
         this.memoriaRam =  memoriaRam;
         this.armazenamento = armazenamento; 
+    }
+    
+    public boolean validaNumero(String variavel){
+         boolean isNumeric = (variavel != null && variavel.matches("[0-9]+"));
+         
+         return isNumeric;
     }
     
     public int getIdCelular(){
@@ -62,8 +69,6 @@ public class Celular {
     public void setArmazenamento(float armazenamento){
         this.armazenamento = armazenamento;
     }
-    
-    
     
     public static void Ligar (){
         for (int i = 0; i < 10; i++) {

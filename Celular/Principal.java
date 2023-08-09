@@ -26,6 +26,10 @@ public class Principal {
         celular1.Ligar();
         celular1.Desligar();
         celular1.evniarMensagem();
+        
+        boolean teste  = celular1.validaNumero("abdreu56");
+        
+        System.out.println(teste);
     }
     
 }
